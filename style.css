@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+
+    background-image: url('https://images6.alphacoders.com/135/1354114.png');
+    background-size: cover;
+    font-family: 'Madimi One', cursive;
+    scale: 0.80;
+}
+
+button {
+    font-family: 'Madimi One', cursive;
+    font-size: 1.5em;
+    background-color: #f1f1f1;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.cards {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto ;
+    gap: 5px;
+    backdrop-filter: blur(4px);
+    border-radius: 50px;
+}
+
+
