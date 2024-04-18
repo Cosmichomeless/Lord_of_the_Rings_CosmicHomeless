@@ -9,18 +9,24 @@
 <link rel="stylesheet" href="../Css/style.css">
 
 <body>
-
+    
+    <p>¿Recuerdas lo que sucedio anteriormente con el anillo unico?</p>
     <input type="button" name="opcion" id="boton1" value="si">
     <input type="button" name="opcion" id="boton2" value="no">
 
-    <div class="cards">
-        <div id="character"></div>
-        <div id="movie"></div>
-        <div id="book"></div>
-    </div>
 
-    <script src="../Js/Story.js"></script>
-    <script src="../Js/App.js"></script>
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/camino1.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "../Html/camino2.html";
+        });
+    </script>
 
     <!-- cambiar el cursor por el anillo -->
 </body>
