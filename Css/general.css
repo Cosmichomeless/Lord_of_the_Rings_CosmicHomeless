@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'Tolkien';
+    src: url('../Assets/tolkien.ttf') format('truetype');
+}
+
+:root {
+    background-image: url('https://images6.alphacoders.com/135/1354114.png');
+    background-size: cover;
+    font-family: 'Tolkien';
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}
+
+input[type=button] {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.5vw;
+    padding: 0 2vw;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-right: 2vw;
+    width: 50%;
+    font-family: tolkien;
+}
+
+input[type=button]:hover {
+    background-color: #fff;
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}
+
+input[type=button]:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+/* Estilo para los bocadillos */
+.comentarios {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    width: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+}
+
+.comentarios:hover {
+    background-color: #fff;
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}
+
+/* Botones normales */
+.botones {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-top: 10%;
+}
+
+.botones:hover {
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}
+
+/* Botones en vertical */
+.botones_2 {
+    position: absolute;
+    top: 70%;
+    left: 63%;
+    transform: translateX(-50%);
+    display: grid;
+    width: 50%;
+    gap: 1vw;
+    font-size: 1.5vw;
+}
+
+.botones_2:hover {
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes desaparecer {
+    to {
+        opacity: 0;
+    }
+}
+
+
+.coment {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    width: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+}
+
+.coment:hover {
+    background-color: #fff;
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}
+
+.Personaje {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    width: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    animation: aparecer 0.7s linear forwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: 600;
+    background-color: #fbeee0d8;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    transition: 0.5s;
+}
+
+.Personaje:hover {
+    background-color: #fbeee0;
+    box-shadow: #422800 4px 4px 0 0;
+    scale: 1.1;
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}
+
+/* Clase para mostrar el personaje */
+#Brwynna,
+#Bronwyn {
+    /* otras propiedades */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: 600;
+    color: #422800;
+    background-color: #fbeee0d8;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    transition: 0.5s;
+}
+
+#Brwynna:hover,
+#Bronwyn:hover {
+    background-color: #fbeee0;
+    box-shadow: #422800 4px 4px 0 0;
+    scale: 1.1;
+    cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+}

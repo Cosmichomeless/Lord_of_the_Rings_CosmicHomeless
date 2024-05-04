@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+
+            background-image: url('..//Assets/fellowship.jpeg');
+            background-size: cover;
+            cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comentarios">
+        <p>De acuerdo.
+            Esta historia no es para cualquiera, ya que debes dejar todo atras y aceptar <br>lo que puede ser viaje solo
+            de
+            ida.
+        </p>
+    </div>
+    <div class="botones_2">
+        <input type="button" name="opcion" id="boton1" value="No es para mi">
+        <input type="button" name="opcion" id="boton2" value="Esta bien acepto">
+    </div>
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/Fin.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "../Html/Personajes.html";
+
+        });
+    </script>
+
+</body>
+
+</html>

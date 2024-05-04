@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brwynna</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        #video-comarca {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .comentarios {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <video id="video-comarca" autoplay loop muted>
+        <source src="../Assets/comarca.mp4" type="video/mp4">
+    </video>
+
+    <div class="comentarios">
+        <h1>Bronwyn, el Hobbit Buscador de Reliquias
+        </h1>
+    </div>
+    <div class="comentarios">
+        <h2>Descripción</h2>
+        <p>Bronwyn es un hobbit de mirada inquisitiva, con cabello rizado y pies peludos. Su piel está tostada por el
+            sol y su
+            porte es modesto pero firme. Aunque no posee la estatura de los hombres ni la sabiduría de los elfos, su
+            corazón es
+            grande y su curiosidad insaciable..</p>
+        <p>
+    </div>
+    <div class="comentarios">
+        <h2>Historia</h2>
+        <p>Bronwyn creció en la Comarca, rodeado de leyendas sobre los Anillos de Poder. Su abuelo, un antiguo
+            explorador,
+            le
+            contaba historias sobre Bilbo Bolsón y la aventura inesperada. Desde joven, Bronwyn soñó con descubrir
+            reliquias
+            perdidas y desentrañar los secretos de la Segunda Edad.</p>
+    </div>
+    <div class="comentarios">
+        <h2>Habilidades</h2>
+        <p>Bronwyn es un experto en hierbas y remedios naturales. Sabe cómo curar heridas y
+            aliviar
+            dolencias con las plantas que crecen en los campos de la Comarca.
+            Sigilo Hobbit: Aunque no es un guerrero, Bronwyn se mueve con sigilo y rapidez. Sus pies peludos apenas
+            hacen ruido al
+            pisar la tierra.
+            Pasión por la Historia: Bronwyn devora libros antiguos y pergaminos polvorientos. Su mente está llena de
+            cuentos épicos
+            y leyendas olvidadas.
+            Objetivo
+            Bronwyn busca un objeto legendario: el Anillo de los Recuerdos. Según las leyendas, este anillo permite a su
+            portador
+            revivir momentos del pasado. Pero también se dice que quien lo posea deberá enfrentarse a sus propios
+            demonios internos.</p>
+    </div>
+    <div class="comentarios">
+        <h2>Frase característica
+        </h2>
+        <p>“Los secretos del pasado son las llaves hacia el futuro.”
+        </p>
+
+    </div>
+
+    <img src="../Assets/Bronwyn_comic.png" alt="Bronwyn" style="position: absolute; top: 0; left: 0;">
+
+    <div class="botones">
+        <input type="button" onclick="showNextComment()" name="opcion" id="boton1" value="Siguiente">
+    </div>
+    <script>
+        var currentComment = 0; // Índice para el comentario actual
+        var comments = document.getElementsByClassName("comentarios"); // Todos los elementos de comentario
+
+        function showNextComment() {
+            // Asegúrate de que haya comentarios para mostrar
+            if (comments.length === 0) return;
+
+            // Oculta el comentario anterior
+            if (currentComment > 0) { // Evita ocultar antes de la primera vez
+                comments[currentComment - 1].style.opacity = "0";
+            }
+
+            // Muestra el comentario actual
+            comments[currentComment].style.opacity = "1";
+
+            // Incrementa el índice de comentario actual
+            currentComment++;
+
+            // Comprueba si ya se han mostrado todos los comentarios
+            if (currentComment >= comments.length) {
+                // Redirecciona a otra página después de un pequeño retraso para asegurar que se muestre el último comentario
+                setTimeout(function () {
+                    window.location.href = '../Html/Introduccion.html'; // Cambia 'nueva-pagina.html' por tu URL destino
+                }, 5000); // Redirige después de 1 segundo (ajusta según sea necesario)
+            }
+        }
+    </script>
+
+</body>
+
+</html>

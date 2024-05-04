@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        #video-shire {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .comentarios {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+
+        #personajes {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards;
+            cursor: url('../Assets/11zon_One_Ring_Blender_Render.cur'), auto;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video-shire" autoplay loop muted>
+        <source src="../Assets/shire.mp4" type="video/mp4">
+    </video>
+
+    <div class="comentarios">
+        <p>Todo comienza en la comarca, un lugar tranquilo y pacifico donde los hobbits viven en armonia</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 5s, 10s;
+">
+        <p> Pero...</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 10s, 15s;
+">
+        <p>Antes de todo debes elegir a quien encarnaras en esta larga historia</p>
+    </div>
+    <div id="personajes" style="animation-delay: 15s;
+">
+        <div id="Bronwyn">
+            <img src="../Assets/Bronwyn_comic.png" alt="Bronwyn">
+            <p>Bronwyn</p>
+        </div>
+        <div id="Brwynna" style="left: 70%;">
+            <img src="../Assets/Brwynna.png" alt="Brwynna">
+            <p>Brwynna</p>
+        </div>
+    </div>
+    <script>
+        var boton1 = document.getElementById("Bronwyn");
+        var boton2 = document.getElementById("Brwynna");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/Bronwyn.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "../Html/Brwynna.html";
+        });
+    </script>
+
+
+</body>
+
+</html>
