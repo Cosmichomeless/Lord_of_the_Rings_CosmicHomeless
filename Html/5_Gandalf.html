@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gandalf</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/shire_mañana.png");
+        }
+
+        .comentarios,
+        .personaje,
+        .botones {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+
+        .personaje {
+            top: 50%;
+            left: 50%;
+            align-items: center;
+        }
+
+        .personaje img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comentarios">
+        <p>Gandal el gris, ahora se hacia llamar Gandalf el oscuro</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 5s, 10s;
+    ">
+        <p>y venia en busca del anillo unico, el cual Bilbo escondio en la comarca</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 10s, 15s;
+        ">
+        <p>Un anillo que podria traer la destruccion de la tierra media</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 15s, 25s;
+        ">
+        <p>Y tu no debes dejar que caiga en sus manos, por eso debes encontrarlo primero</p>
+    </div>
+    <div class="personaje" style="animation-delay: 25s,30s;">
+        <img src="../Assets/gandalf.png" alt="   " style=" animation-delay: 25s,100000s;">
+        <div class=" comentarios" style="top: 80%;animation-delay: 25s,30s;">
+            <p>
+                He venido a por mi anillo, damelo ahora o sufriras las consecuencias
+            </p>
+        </div>
+    </div>
+    <div class="comentarios" style="animation-delay: 30s,10000s;">
+        <p>¿Quieres hablar con el o prefieres no hacerlo?</p>
+    </div>
+    <div class="botones" style="animation-delay: 30s,100000s;">
+        <input type="button" name="opcion" id="boton1" value="Hablar">
+        <input type="button" name="opcion" id="boton2" value="No hablar">
+    </div>
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/6_Dialogo.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "./6_No_hablar.html";
+        });
+    </script>
+</body>
+
+</html>

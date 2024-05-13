@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/escritorio.jpg");
+        }
+
+        .comentarios {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comentarios">
+        <p>Esta historia transcurre en bolson cerrado, una de las cuatro cuadernas de la comarca</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 5s, 10s;
+">
+        <p>un lugar tranquilo y pacifico donde los hobbits viven en armonia</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 10s, 15s;
+    ">
+        <p>Como de constumbre Gandalf el gris visita la comarca cada otoño </p>
+    </div>
+    <div class="comentarios" style="animation-delay: 15s, 25s;
+        ">
+        <p>Ya que es tradicion para el abastecerse de hierba para pipa, ya que ahi es donde se planta la mejor de
+            toda la tierra media</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 25s, 30s;
+            ">
+        <p>Pero esta ultima visita guardaba una tenebrosa sorpresa</p>
+    </div>
+    <script>
+        setTimeout(function () {
+            window.location.href = "../html/5_Gandalf.html";
+        }, 30000);
+    </script>
+</body>
+</body>
+
+</html>

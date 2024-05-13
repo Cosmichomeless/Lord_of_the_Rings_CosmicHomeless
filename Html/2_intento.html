@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        #video-sauron {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video-sauron" autoplay loop muted>
+        <source src="../Assets/anillo.mp4" type="video/mp4">
+    </video>
+    <div class="comentarios">
+        <p>De acuerdo.
+            Esta historia no es para cualquiera, ya que debes dejar todo atras y aceptar <br>lo que puede ser viaje solo
+            de
+            ida.
+        </p>
+    </div>
+    <div class="botones_2">
+        <input type="button" name="opcion" id="boton1" value="No es para mi">
+        <input type="button" name="opcion" id="boton2" value="Esta bien acepto">
+    </div>
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/Fin.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "../Html/2_Personajes.html";
+
+        });
+    </script>
+
+</body>
+
+</html>

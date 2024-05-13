@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/shire_mañana.png");
+            background-size: cover;
+        }
+
+
+
+        .comentarios,
+        .botones {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comentarios" style="top: 70%;">
+        <p>Por donde vas a huir</p>
+    </div>
+    <div class="botones_2" id="botones1">
+        <input type="button" name="opcion" id="boton1" value="Cruzar el rio">
+        <input type="button" name="opcion" id="boton2" value="Correr colina abajo">
+    </div>
+
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/Rio.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "./colina.html";
+        });
+    </script>
+</body>
+
+</html>
