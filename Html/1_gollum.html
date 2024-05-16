@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproducir Video Automáticamente</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay id="video">
+        <source src="../Assets/Introduccion.mp4" type="video/mp4">
+    </video>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var video = document.getElementById('video');
+
+            function ini_Video() {
+                video.addEventListener('loadeddata', function () {
+                    video.play().catch(function (error) {
+                        console.error('No se pudo iniciar la reproducción del video:', error);
+                    });
+                });
+                video.addEventListener('ended', function () {
+                    window.location.href = '../Html/1_preparado.html';
+                });
+            }
+            ini_Video();
+        });
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//Css/general.css">
+    <style>
+        #video_creditos {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+    <video id="video_creditos" autoplay loop muted>
+        <source src="../Assets/creditos.mp4" type="video/mp4">
+    </video>
+
+    <div class="comentarios" style="top: 50%;left: 50%;">
+        <p>Claramente tu solo no puedes platarle cara, deberias buscar ayuda</p>
+    </div>
+    <div class="botones">
+        <input type="button" name="opcion" id="boton1" value="Volver">
+    </div>
+    <script>
+        var boton1 = document.getElementById("boton1");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/7_no_dar.html";
+        });
+    </script>
+</body>
+
+</html>

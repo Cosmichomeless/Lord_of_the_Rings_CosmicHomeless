@@ -11,26 +11,40 @@
             background-image: url("../Assets/shire_mañana.png");
         }
 
+        @keyframes alFrente {
+            0% {
+                left: 0;
+                top: 0;
+                width: 1%;
+            }
+
+            100% {
+
+                width: 100%;
+                transform: translate(35%, 10%);
+                scale: 2;
+            }
+        }
+
+        .personaje img {
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards,
+                alFrente 1s linear forwards;
+        }
+
+        .personaje {
+            position: absolute;
+            opacity: 0;
+            top: 10%;
+            left: 15%;
+        }
+
         .comentarios,
         .personaje,
         .botones {
             opacity: 0;
             animation: aparecer 0.7s linear forwards,
                 desaparecer 0.7s linear 5s forwards;
-        }
-
-        .personaje {
-            top: 50%;
-            left: 50%;
-            align-items: center;
-        }
-
-        .personaje img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transition: 1s;
         }
     </style>
 </head>
@@ -52,8 +66,8 @@
         <p>Y tu no debes dejar que caiga en sus manos, por eso debes encontrarlo primero</p>
     </div>
     <div class="personaje" style="animation-delay: 25s,30s;">
-        <img src="../Assets/gandalf.png" alt="   " style=" animation-delay: 25s,100000s;">
-        <div class=" comentarios" style="top: 80%;animation-delay: 25s,30s;">
+        <img src="../Assets/gandalf.png" alt="" style=" animation-delay: 25s,100000s;">
+        <div class=" comentarios" style="top: 150%;width: 150%;left: 120%;animation-delay: 25s,30s;">
             <p>
                 He venido a por mi anillo, damelo ahora o sufriras las consecuencias
             </p>
@@ -75,7 +89,7 @@
         });
 
         boton2.addEventListener("click", function () {
-            window.location.href = "./6_No_hablar.html";
+            window.location.href = "../Html/7_no_dar.html";
         });
     </script>
 </body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/colina.jpg");
+            background-size: cover;
+        }
+
+
+
+        .comentarios {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comentarios" style="animation-delay: 0s, 5s;
+">
+        <p>Tras bajar toda la colina consigues refugiarte en un agujero en la tierra</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 5s,10s;">
+        <p>Donde te encuentras con unos viejos amigos</p>
+    </div>
+
+
+    <script>
+        setTimeout(function () {
+            window.location.href = '../Html/10_hueco.html';
+        }, 10000); 
+    </script>
+</body>
+
+</html>

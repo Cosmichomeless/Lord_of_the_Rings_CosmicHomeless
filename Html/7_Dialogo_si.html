@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/gandalf_fondo.png");
+            background-size: cover;
+        }
+
+
+
+        .comentarios,
+        .botones {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comentarios">
+        <p>Bilbo nunca debio dartelo es una carga muy pesada para un simple hobbit, <br>creo que seria mejor que lo
+            guardase yo</p>
+    </div>
+    <div class="botones visible" id="botones1">
+        <input type="button" name="opcion" id="boton1" value="Darselo">
+        <input type="button" name="opcion" id="boton2" value="No Darselo">
+
+    </div>
+
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/Fin.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "../Html/7_no_dar.html";
+        });
+
+    </script>
+</body>
+
+</html>

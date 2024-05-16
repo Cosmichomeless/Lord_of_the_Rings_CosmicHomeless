@@ -73,13 +73,13 @@
         <input type="button" onclick="siguiente_comentario()" name="opcion" id="boton1" value="Siguiente">
     </div>
     <script>
-        var currentComment = 0; 
-        var comments = document.getElementsByClassName("comentarios"); 
+        var currentComment = 0;
+        var comments = document.getElementsByClassName("comentarios");
 
         function siguiente_comentario() {
             if (comments.length === 0) return;
 
-            if (currentComment > 0) { 
+            if (currentComment > 0) {
                 comments[currentComment - 1].style.opacity = "0";
             }
 
@@ -89,8 +89,8 @@
 
             if (currentComment >= comments.length) {
                 setTimeout(function () {
-                    window.location.href = '../Html/4_Introduccion.html'; 
-                }, 5000); 
+                    window.location.href = '../Html/4_Introduccion.html';
+                }, 3000);
             }
         }
     </script>

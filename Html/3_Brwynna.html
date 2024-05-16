@@ -74,30 +74,24 @@
         <input type="button" onclick="siguiente_comentario()" name="opcion" id="boton1" value="Siguiente">
     </div>
     <script>
-        var currentComment = 0; // Índice para el comentario actual
-        var comments = document.getElementsByClassName("comentarios"); // Todos los elementos de comentario
+        var currentComment = 0;
+        var comments = document.getElementsByClassName("comentarios");
 
         function siguiente_comentario() {
-            // Asegúrate de que haya comentarios para mostrar
             if (comments.length === 0) return;
 
-            // Oculta el comentario anterior
-            if (currentComment > 0) { // Evita ocultar antes de la primera vez
+            if (currentComment > 0) {
                 comments[currentComment - 1].style.opacity = "0";
             }
 
-            // Muestra el comentario actual
             comments[currentComment].style.opacity = "1";
 
-            // Incrementa el índice de comentario actual
             currentComment++;
 
-            // Comprueba si ya se han mostrado todos los comentarios
             if (currentComment >= comments.length) {
-                // Redirecciona a otra página después de un pequeño retraso para asegurar que se muestre el último comentario
                 setTimeout(function () {
-                    window.location.href = '../Html/4_Introduccion.html'; // Cambia 'nueva-pagina.html' por tu URL destino
-                }, 5000); // Redirige después de 1 segundo (ajusta según sea necesario)
+                    window.location.href = '../Html/4_Introduccion.html';
+                }, 3000);
             }
         }
     </script>

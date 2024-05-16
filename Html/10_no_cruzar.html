@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/shire_mañana.jpg");
+            background-size: cover;
+        }
+
+        #video_rio {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .comentarios {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video_rio" autoplay loop muted>
+        <source src="../Assets/Rio.mp4" type="video/mp4">
+    </video>
+    <div class="comentarios" style="animation-delay: 0s, 5s;
+">
+        <p>Aunque has decidio no cruzar aparece una elfa que decide ayudarte</p>
+    </div>
+    <div class="comentarios" style="animation-delay: 5s, 10s;
+">
+        <p>Ya que gandalf no venia solo sino con algunos de los caminantes negros,q ue te pisaban los talones</p>
+    </div>
+
+
+    <script>
+        setTimeout(function () {
+            window.location.href = "../html/11_rio.html";
+        }, 10000);
+    </script>
+</body>
+
+</html>

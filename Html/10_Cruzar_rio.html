@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/shire_mañana.jpg");
+            background-size: cover;
+        }
+
+        #video_rio {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .comentarios,
+        .botones {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video_rio" autoplay loop muted>
+        <source src="../Assets/Rio.mp4" type="video/mp4">
+    </video>
+    <div class="comentarios">
+        <p>Te lleva la corriente pero aparece una elfa que te resulta familiar</p>
+    </div>
+    <div class="botones visible" id="botones1">
+        <input type="button" name="opcion" id="boton1" value="Cruzar">
+        <input type="button" name="opcion" id="boton2" value="No Cruzar">
+    </div>
+
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../html/12_arwen.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "../Html/10_no_cruzar.html";
+        });
+    </script>
+</body>
+
+</html>
