@@ -34,18 +34,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('video');
-
-            function ini_Video() {
-                video.addEventListener('loadeddata', function () {
-                    video.play().catch(function (error) {
-                        console.error('No se pudo iniciar la reproducción del video:', error);
-                    });
-                });
-                video.addEventListener('ended', function () {
-                    window.location.href = '../Html/arwen.html';
-                });
-            }
-            ini_Video();
+            video.addEventListener('ended', function () {
+                window.location.href = '../Html/12_arwen.html';
+            });
         });
     </script>
 </body>

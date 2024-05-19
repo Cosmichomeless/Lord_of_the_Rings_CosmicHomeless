@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="..//Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/party.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        #video-fuegos {
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .comentarios {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <video id="video-fuegos">
+            <source src="../Assets/fuegos.mp4" type="video/mp4">
+        </video>
+
+        <div class="comentarios" style="animation-delay: 0s,5s;">
+            <p>Comienza la fiesta de los fuegos artificiales, la ciudad se ilumina con colores brillantes y la gente se
+                reune para disfrutar de este espectaculo.
+            </p>
+        </div>
+        <div class="comentarios" style="animation-delay: 5s,10s;">
+            <p>Pero como no podia ser de otra manera, Merry y Pippin se han colado y la han liado con los fuegos
+                artificiales
+            </p>
+        </div>
+        <div class="comentarios" style="animation-delay: 10s,15s;">
+            <p>Puede que no me creas por lo que sera mejor que lo veas por ti mismo</p>
+            </p>
+        </div>
+
+        <script>var video = document.getElementById("video-fuegos");
+
+            setTimeout(function () {
+                video.style.display = "block";
+                video.play();
+            }
+
+                , 15000);
+
+        </script>
+        <script>
+            video.addEventListener('ended', function () {
+                window.location.href = "../Html/Final.html";
+            });
+        </script>
+    </body>
+
+</html>

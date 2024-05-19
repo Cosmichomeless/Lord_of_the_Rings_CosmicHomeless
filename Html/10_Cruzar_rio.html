@@ -35,24 +35,14 @@
         <source src="../Assets/Rio.mp4" type="video/mp4">
     </video>
     <div class="comentarios">
-        <p>Te lleva la corriente pero aparece una elfa que te resulta familiar</p>
+        <p>Antes de que comiences a cruzar el rio te recoge alguien y te ayuda a cruzar el rio</p>
     </div>
-    <div class="botones visible" id="botones1">
-        <input type="button" name="opcion" id="boton1" value="Cruzar">
-        <input type="button" name="opcion" id="boton2" value="No Cruzar">
-    </div>
+
 
     <script>
-        var boton1 = document.getElementById("boton1");
-        var boton2 = document.getElementById("boton2");
-
-        boton1.addEventListener("click", function () {
-            window.location.href = "../html/12_arwen.html";
-        });
-
-        boton2.addEventListener("click", function () {
-            window.location.href = "../Html/10_no_cruzar.html";
-        });
+        setTimeout(function () {
+            window.location.href = "../html/11_rio.html";
+        }, 5000);
     </script>
 </body>
 

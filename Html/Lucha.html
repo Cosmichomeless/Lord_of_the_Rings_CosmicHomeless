@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/colina.jpg");
+            background-size: cover;
+        }
+
+        .comentarios,
+        .botones {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="..//Css/general.css">
+        <style>
+            :root {
+                background-image: url("../Assets/gandalf_fondo.png");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <body>
+
+
+            <div class="comentarios">
+                <p>La tierra media esta en paz gracias a tus respuestas, la oscuridad se ha ido y la luz ha vuelto a
+                    brillar
+                </p>
+            </div>
+        </body>
+
+    </html>
+    <div class="comentarios" style="animation-delay:0s,5s">
+        <p>Te dispones a romper la pipa de gandalf lo que deberia acabar con su obsesion por el anillo</p>
+    </div>
+    <div class="comentarios" style="animation-delay:5s,1000s">
+        <p>como prefieres actuar</p>
+    </div>
+    <div class="botones" id="botones1" style="animation-delay: 5s,1000s;">
+        <input type="button" name="opcion" id="boton1" value="Lanzar Piedra">
+        <input type="button" name="opcion" id="boton2" value="Movimientos Rapidos">
+    </div>
+
+    <script>
+        var boton1 = document.getElementById("boton1");
+        var boton2 = document.getElementById("boton2");
+
+        boton1.addEventListener("click", function () {
+            window.location.href = "../Html/13_lucha_piedra.html";
+        });
+
+        boton2.addEventListener("click", function () {
+            window.location.href = "../Html/13_lucha_movimientos.html";
+        });
+    </script>
+</body>
+
+</html>

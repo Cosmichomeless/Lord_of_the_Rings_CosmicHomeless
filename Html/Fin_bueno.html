@@ -7,14 +7,15 @@
     <title>Document</title>
     <link rel="stylesheet" href="..//Css/general.css">
     <style>
-        #video-sauron {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
+        :root {
+            background-image: url("../Assets/gandalf_bueno.png");
+            background-size: cover;
+        }
+
+        .comentarios {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
         }
     </style>
 </head>
@@ -22,14 +23,24 @@
 <body>
 
     <body>
-        <video id="video-sauron" autoplay loop muted>
-            <source src="../Assets/shire.mp4" type="video/mp4">
-        </video>
 
-        <div class="comentarios">
+        <div class="comentarios" style="animation-delay: 0s,5s;">
+            <p>tras conseguir romper la pipa. Gandalf vuelve a ser el mismo de simpre y te agradece tu ayuda
+            </p>
+        </div>
+        <div class="comentarios" style="animation-delay: 5s,10s;">
             <p>La tierra media esta en paz gracias a tus respuestas, la oscuridad se ha ido y la luz ha vuelto a brillar
             </p>
         </div>
+        <div class="comentarios" style="animation-delay: 10s,15s;">
+            <p>Y como es conocido en la comarca se celebra con una buena fiesta en la que todos los habitantes de la
+                tierra media se unen para celebrar la paz</p>
+        </div>
+        <script>
+            setTimeout(() => {
+                window.location.href = "../Html/fuegos.html";
+            }, 15000);
+        </script>
     </body>
 
 </html>

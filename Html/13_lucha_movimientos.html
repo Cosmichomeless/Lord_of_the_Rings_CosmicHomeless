@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Css/general.css">
+    <style>
+        :root {
+            background-image: url("../Assets/pelea.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .comentarios {
+            opacity: 0;
+            animation: aparecer 0.7s linear forwards,
+                desaparecer 0.7s linear 5s forwards;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comentarios" style="animation-delay: 0s,5s;">
+        <p>Aprovechas el momento el que gandalf se dispone a buscar algo en su cofre</p>
+    </div>
+
+    <div class="comentarios" style="animation-delay: 5s,10s;">
+        <p>Entonces te aprovechas de tu agilidad y le robas la pipa antes de que pueda reaccionar</p>
+    </div>
+    <script>
+        setTimeout(() => {
+            window.location.href = "../Html/15_pipa_m.html";
+        }, 10000);
+    </script>
+</body>
+
+</html>

@@ -6,34 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Story</title>
     <link rel="stylesheet" href="../Css/general.css">
+        <style>
+            #video-anillo {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+            }
+        </style>
+    </head>
 
-</head>
+    <body>
+
+        <body>
+            <video id="video-anillo" autoplay loop muted>
+                <source src="../Assets/anillo.mp4" type="video/mp4">
+            </video>
+
+        <div class="comentarios">
+            <p style="font-size: 30px;">Lo primero de todo. ¿Recuerdas como acabo el anillo?</p>
+        </div>
+        <div class="botones">
+            <input type="button" name="opcion" id="boton1" value="SI">
+            <input type="button" name="opcion" id="boton2" value="NO">
+        </div>
 
 
-<body>
+        <script>
+            var boton1 = document.getElementById("boton1");
+            var boton2 = document.getElementById("boton2");
 
-    <div class="comentarios">
-        <p style="font-size: 30px;">¿Recuerdas como acabo el anillo?</p>
-    </div>
-    <div class="botones">
-        <input type="button" name="opcion" id="boton1" value="SI">
-        <input type="button" name="opcion" id="boton2" value="NO">
-    </div>
+            boton1.addEventListener("click", function () {
+                window.location.href = "../Html/1_preparado.html";
+            });
 
+            boton2.addEventListener("click", function () {
+                window.location.href = "../Html/1_gollum.html";
+            });
+        </script>
 
-    <script>
-        var boton1 = document.getElementById("boton1");
-        var boton2 = document.getElementById("boton2");
-
-        boton1.addEventListener("click", function () {
-            window.location.href = "../Html/1_preparado.html";
-        });
-
-        boton2.addEventListener("click", function () {
-            window.location.href = "../Html/1_gollum.html";
-        });
-    </script>
-
-</body>
+    </body>
 
 </html
